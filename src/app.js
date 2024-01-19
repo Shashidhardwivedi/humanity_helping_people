@@ -88,13 +88,14 @@ app.post("/login",async(req,res)=>{
  
 
         if(isMatch){
+            
             res.status(201).redirect("/index.html");
         }else{
             res.send("Invalid Login Details");
         }
 
     } catch (error) {
-        res.status(400).send("Invalid Email")
+        res.status(400).send("Invalid credentials")
     }
 })
 
@@ -128,8 +129,8 @@ app.post("/register", async (req,res) =>{
         }
 
     } catch (error) {
-        res.status(400).send(error)
-        console.log("the error part page");
+        res.status(400).send("user already registered")
+        // console.log("the error part page");
     }
 })
 

@@ -4,20 +4,20 @@ const jwt = require("jsonwebtoken");
 const registerSchema = new mongoose.Schema({
     name : {
         type:String,
-        required:true
+        required:[true, "Name is required"],
     },
     email : {
-       type: String,
-       required:true,
-       unique:true
+        type: String,
+        required: [true, "Email is required"],
+        unique: [true, "Email is already registered"],
     },
     password:{
         type:String, 
-        required:true,
+        required:[true, "Password is required"],
     },
     confirmpassword:{
         type:String, 
-        required:true,
+        required:[true, "confirm Password is required"],
     },
     tokens:[{
         token:{
