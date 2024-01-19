@@ -107,7 +107,7 @@ nav .fa{
         margin-left: 0.5rem;
         animation: moveright 1s linear 1;
         animation-delay: 2s;
-        /* visibility: hidden; */
+        visibility: hidden;
         animation-fill-mode: forwards;
     }
 
@@ -116,6 +116,5 @@ nav .fa{
         height: 4px;
         background-color: white;
         margin: 6px 0;
-        
     }
 }

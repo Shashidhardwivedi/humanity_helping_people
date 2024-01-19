@@ -34,11 +34,6 @@
         <div class="nav-links nav-linksAnimat" id="navLinks">
             <i class="fa " onclick="hideMenu()">&#10006;</i>
             <ul>
-                <!-- <li> <a href="/index.html">HOME</a></li>
-                <li> <a href="/blog">BLOG</a></li>
-                <li> <a href="/Gallery.html">LOCATION</a></li>
-                <li> <a href="/login.html">REGISTER HERE/SIGN UP</a></li>
-                <li> <a href="/logout">LOG OUT</a></li> -->
                 <li> <a href="/index.html">HOME</a></li>
                 <li> <a href="/donate">DONATE</a></li>
                 <li> <a href="/blog">BLOG</a></li>
@@ -46,7 +41,7 @@
                 <li id="demo" onclick="myFunction()"> <a href="/logout">LOG OUT</a></li>
             </ul>
         </div>
-        <div class="burgerAnimat container" onclick="showMenu()">
+        <div class="burgerAnimat container"  onclick="showMenu()">
             <div class="bar1"></div>
             <div class="bar1"></div>
             <div class="bar1"></div>
@@ -322,7 +317,7 @@
     var navLinks = document.getElementById("navLinks");
 
     function showMenu() {
-      navLinks.style.right = "0px";
+      navLinks.style.right = "-20px";
     }
     function hideMenu() {
       navLinks.style.right = "-160px";
