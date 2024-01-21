@@ -26,14 +26,13 @@ app.get("/",(req,res)=>{
     res.send("index.html")
 });
 
-app.get("/donate",(req,res)=>{
-    res.redirect("donate.html")
+app.get("/donate",auth,(req,res)=>{
+    res.sendFile(path.join(__dirname, "../public/donate.html"));
 })
 
 // for Security we use (auth)
-app.get("/blog",(req,res)=>{
-    res.redirect("blog.html")
-    
+app.get("/blog",auth,(req,res)=>{
+    res.sendFile(path.join(__dirname, "../public/blog.html"));
 }) 
 
 app.get("/logout",auth,async(req,res)=>{
