@@ -31,10 +31,9 @@ app.get("/donate",(req,res)=>{
 })
 
 // for Security we use (auth)
-app.get("/blog",auth,(req,res)=>{
+app.get("/blog",(req,res)=>{
     // console.log(`This is cookie ${req.cookies.jwt}`); 
     res.redirect("blog.html")
-    
 }) 
 
 // app.get("/blog",(req,res)=>{
