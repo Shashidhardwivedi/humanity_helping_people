@@ -26,14 +26,15 @@ app.get("/",(req,res)=>{
     res.send("index.html")
 });
 
-app.get("/donate",(req,res)=>{
+app.get("/donate",auth,(req,res)=>{
     res.redirect("donate.html")
 })
 
 // for Security we use (auth)
-app.get("/blog",(req,res)=>{
+app.get("/blog",auth,(req,res)=>{
     // console.log(`This is cookie ${req.cookies.jwt}`); 
     res.redirect("blog.html")
+    
 }) 
 
 // app.get("/blog",(req,res)=>{
@@ -41,7 +42,7 @@ app.get("/blog",(req,res)=>{
 //     res.redirect("blog.html")
 // }) 
 
-app.get("/logout",async(req,res)=>{
+app.get("/logout",auth,async(req,res)=>{
     try {
 
         // for single device logout
