@@ -27,12 +27,12 @@ app.get("/",(req,res)=>{
 });
 
 app.get("/donate",auth,(req,res)=>{
-    res.sendFile(path.join(__dirname, "../public/donate.html"));
+    res.status(201).redirect("donate.html");
 })
 
 // for Security we use (auth)
 app.get("/blog",auth,(req,res)=>{
-    res.sendFile(path.join(__dirname, "../public/blog.html"));
+    res.status(201).redirect("blog.html");
 }) 
 
 app.get("/logout",auth,async(req,res)=>{
