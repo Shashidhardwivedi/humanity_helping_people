@@ -32,15 +32,9 @@ app.get("/donate",auth,(req,res)=>{
 
 // for Security we use (auth)
 app.get("/blog",auth,(req,res)=>{
-    // console.log(`This is cookie ${req.cookies.jwt}`); 
     res.redirect("blog.html")
     
 }) 
-
-// app.get("/blog",(req,res)=>{
-    // console.log(`This is cookie ${req.cookies.jwt}`); 
-//     res.redirect("blog.html")
-// }) 
 
 app.get("/logout",auth,async(req,res)=>{
     try {
