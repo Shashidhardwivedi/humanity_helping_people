@@ -26,7 +26,7 @@ app.get("/",(req,res)=>{
     res.send("index.html")
 });
 
-app.get("/donate",auth,(req,res)=>{
+app.get("/donate",(req,res)=>{
     res.redirect("donate.html")
 })
 
@@ -42,7 +42,7 @@ app.get("/blog",auth,(req,res)=>{
 //     res.redirect("blog.html")
 // }) 
 
-app.get("/logout",auth,async(req,res)=>{
+app.get("/logout",async(req,res)=>{
     try {
 
         // for single device logout
