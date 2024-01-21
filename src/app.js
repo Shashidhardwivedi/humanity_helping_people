@@ -26,12 +26,12 @@ app.get("/",(req,res)=>{
     res.send("index.html")
 });
 
-app.get("/donate",auth,(req,res)=>{
+app.get("/donate",(req,res)=>{
     res.redirect("donate.html")
 })
 
 // for Security we use (auth)
-app.get("/blog",auth,(req,res)=>{
+app.get("/blog",(req,res)=>{
     res.redirect("blog.html")
     
 }) 
